@@ -8,15 +8,21 @@
  */
 
 import React from 'react';
-import {View, StatusBar} from 'react-native';
-import Header from './Header';
-import Barang from './Component/Barang';
+import {View} from 'react-native';
+import HeaderContent from './Component/HeaderContent';
+import Story from './Component/Story';
+import Contents from './Component/Contents';
+import Footers from './Component/Footers';
 
 const App: () => React$Node = () => {
   return (
     <View style={{flex: 1}}>
-      <Header welcome="WELCOME" />
-      <Barang />
+      <HeaderContent />
+      <View style={{height: 100}}>
+        <Story />
+      </View>
+      <Contents />
+      <Footers />
     </View>
   );
 };
